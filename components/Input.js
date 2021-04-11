@@ -4,6 +4,7 @@ export default function Input({
   type,
   id,
   placeholder,
+  value,
   handleChange,
   validity,
 }) {
@@ -21,9 +22,9 @@ export default function Input({
     }
 
     if (event.target.id === 'contactno') {
-      event.target.value.length > 10
+      Number(event.target.value)
         ? setMessage('')
-        : setMessage('Please enter valid email id');
+        : setMessage('Please enter valid contact no');
     }
 
     message.length === 0 ? validity(false) : validity(true);
@@ -40,6 +41,7 @@ export default function Input({
         type={type}
         id={id}
         placeholder={placeholder}
+        value={value}
         onBlur={validate}
         onChange={handleChange}
         className='focus:ring-yellow-400 focus:border-yellow-400 block w-full h-12 shadow-sm border-gray-300 rounded'

@@ -3,10 +3,15 @@ import { server } from '../config/index';
 import Navbar from '../components/Navbar';
 import ContactUs from '../components/ContactUs';
 import Footer from '../components/Footer';
+import Meta from '../components/Meta';
 
 export default function Contact({ offices, locations }) {
   return (
     <div className='flex flex-col min-h-screen overflow-hidden font-poppins'>
+      <Meta
+        title='Contact Us'
+        keywords='pune, head office, ahmedabad, hydrabad, bengaluru, indore, chandigarh, kolkata, delhi, mumbai, jodhpur, jaipur, bhubaneshwar, plant, warehouse, locate, contact'
+      />
       {/*  Site navbar */}
       <Navbar />
 

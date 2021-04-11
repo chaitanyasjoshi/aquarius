@@ -81,19 +81,14 @@ export default function Navbar() {
           </div>
           <div className='flex-1 flex items-center justify-center md:justify-between'>
             <Link href='/'>
-              <a className='flex-shrink-0 flex items-center'>
+              <a className='flex-shrink-0 flex items-center justify-center'>
                 <img
-                  className='block lg:hidden h-8 w-auto'
+                  className='h-10 lg:h-14 w-auto'
                   src='/images/logo.png'
                   alt='Aquarius'
                 />
                 <img
-                  className='hidden lg:block h-12 w-auto'
-                  src='/images/logo.png'
-                  alt='Aquarius'
-                />
-                <img
-                  className='h-5 md:h-6 w-auto'
+                  className='h-12 md:h-14 w-auto'
                   src='/images/brand.png'
                   alt=''
                 />

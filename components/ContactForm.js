@@ -22,8 +22,10 @@ export default function ContactForm() {
 
   const handleSubmit = async () => {
     for (let key in form) {
-      if (form[key] === '') setValidity(false);
-      break;
+      if (form[key] === '') {
+        setValidity(false);
+        break;
+      }
     }
     if (isValid) {
       let response = await fetch(`${server}/api/contact`, {
@@ -34,6 +36,15 @@ export default function ContactForm() {
         body: JSON.stringify(form),
       }).then((res) => res.json());
       alert(response.status);
+      updateForm({
+        name: '',
+        email: '',
+        contactno: '',
+        company: '',
+        city: '',
+        country: 'India',
+        message: '',
+      });
     }
   };
 
@@ -86,6 +97,7 @@ export default function ContactForm() {
                 type='text'
                 id='name'
                 placeholder='Name'
+                value={form.name}
                 handleChange={handleChange}
                 validity={setValidity}
               />
@@ -95,46 +107,47 @@ export default function ContactForm() {
                 type='email'
                 id='email'
                 placeholder='E-mail'
+                value={form.email}
                 handleChange={handleChange}
                 validity={setValidity}
               />
             </div>
-
             <div className='col-span-2 lg:col-span-1'>
               <Input
                 type='tel'
                 id='contactno'
                 placeholder='Contact No'
+                value={form.contactno}
                 handleChange={handleChange}
                 validity={setValidity}
               />
             </div>
-
             <div className='col-span-2 lg:col-span-1'>
               <Input
                 type='text'
                 id='company'
                 placeholder='Company Name'
+                value={form.company}
                 handleChange={handleChange}
                 validity={setValidity}
               />
             </div>
-
             <div className='col-span-2 lg:col-span-1'>
               <Input
                 type='text'
                 id='city'
                 placeholder='City'
+                value={form.city}
                 handleChange={handleChange}
                 validity={setValidity}
               />
             </div>
-
             <div className='col-span-2 lg:col-span-1'>
               <select
                 id='country'
                 name='country'
                 autoComplete='country'
+                value={form.country}
                 onChange={handleChange}
                 className='block w-full h-12 py-2 px-3 border border-gray-300 bg-white rounded shadow-sm focus:outline-none focus:ring-yellow-400 focus:border-yellow-400'
               >
@@ -151,6 +164,7 @@ export default function ContactForm() {
                 name='message'
                 rows='4'
                 placeholder='Describe your requirement'
+                value={form.message}
                 onChange={handleChange}
                 className='shadow-sm focus:ring-yellow-400 focus:border-yellow-400 block w-full border-gray-300 resize-none rounded'
               ></textarea>

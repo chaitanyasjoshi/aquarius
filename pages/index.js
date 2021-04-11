@@ -1,6 +1,6 @@
 import { server } from '../config/index';
-import Head from 'next/head';
 
+import Meta from '../components/Meta';
 import Navbar from '../components/Navbar';
 import HeroHome from '../components/HeroHome';
 import Socials from '../components/Socials';
@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 export default function Index({ features }) {
   return (
     <div className='flex flex-col min-h-screen overflow-hidden font-poppins'>
+      <Meta />
       {/*  Site navbar */}
       <Navbar />
 

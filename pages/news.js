@@ -3,10 +3,15 @@ import { server } from '../config/index';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Event from '../components/Event';
+import Meta from '../components/Meta';
 
 export default function News({ news }) {
   return (
     <div className='flex flex-col min-h-screen overflow-hidden font-poppins'>
+      <Meta
+        title='News'
+        keywords='guinness book of world records, barge mounted batching plant, concrete show, constro, kanyakumari road project, pune running, elematic oy, bc india, manohar parrikar, defence minister of india, ce, soncap, batching plant at highest altitude'
+      />
       {/*  Site navbar */}
       <Navbar />
 

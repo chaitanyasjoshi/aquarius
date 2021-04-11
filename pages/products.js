@@ -3,10 +3,15 @@ import { server } from '../config/index';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Product from '../components/Product';
+import Meta from '../components/Meta';
 
 export default function Products({ products }) {
   return (
     <div className='flex flex-col min-h-screen overflow-hidden font-poppins'>
+      <Meta
+        title='Our Products'
+        keywords='stationary concrete pumps, mobile line pumps, concrete boom pumps, stationary boom placer, stationary batching plants, mobile batching plants, concrete recycling plant, centrifuge sludge separator'
+      />
       {/*  Site navbar */}
       <Navbar />
 

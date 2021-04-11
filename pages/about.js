@@ -1,9 +1,14 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Meta from '../components/Meta';
 
 export default function About() {
   return (
     <div className='flex flex-col min-h-screen overflow-hidden font-poppins'>
+      <Meta
+        title='About Us'
+        keywords='construction, robust, concrete batching, conveying applications, vision, mission, mr. m. s. bhadbhade, mr. a. v. dikshit'
+      />
       {/*  Site navbar */}
       <Navbar />
 
