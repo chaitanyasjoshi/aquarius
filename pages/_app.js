@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 
 import '../styles/globals.css';
+import 'aos/dist/aos.css';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
