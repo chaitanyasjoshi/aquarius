@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Event(props) {
   return (
-    <div className='col-span-1' data-aos='fade-up'>
+    <div className='col-span-1'>
       <div className='p-5 min-h-full bg-white rounded-lg shadow-md overflow-hidden'>
         <img
           className='h-40 mx-auto'

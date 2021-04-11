@@ -16,8 +16,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${
-        !top && 'bg-white blur shadow-lg'
+      className={`fixed w-full z-30 transition duration-300 ease-in-out ${
+        !top ? 'bg-white md:bg-opacity-90 shadow-lg' : 'bg-gray-50'
       }`}
     >
       <div className='max-w-7xl mx-auto px-2 md:px-6 lg:px-8'>
@@ -131,11 +131,11 @@ export default function Navbar() {
       <div
         className={`${
           expanded
-            ? 'h-full transform translate-x-0'
-            : 'h-0 transform -translate-x-full'
+            ? 'h-full opacity-1 transform translate-x-0'
+            : 'h-0 opacity-0 transform -translate-x-full'
         } md:hidden bg-white text-lg duration-500`}
         style={{
-          transitionProperty: 'transform, height',
+          transitionProperty: 'transform',
           transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
         }}
         id='mobile-menu'

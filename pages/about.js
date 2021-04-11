@@ -35,21 +35,14 @@ export default function About() {
 
           <div className='relative'>
             <div className='py-10'>
-              <h4
-                className='text-4xl lg:text-5xl text-gray-800 text-center font-bold'
-                data-aos='zoom-y-out'
-              >
+              <h4 className='text-4xl lg:text-5xl text-gray-800 text-center font-bold'>
                 We believe in making{' '}
                 <span className='bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-yellow-300'>
                   construction
                 </span>{' '}
                 easy
               </h4>
-              <p
-                className='py-5 text-center text-lg text-gray-600 font-medium'
-                data-aos='zoom-y-out'
-                data-aos-delay='150'
-              >
+              <p className='py-5 text-center text-lg text-gray-600 font-medium'>
                 For over 2 decades, Aquarius Engineers has provided a complete
                 range of robust construction equipment for concrete batching and
                 conveying applications, suitable for indian conditions.

@@ -5,10 +5,7 @@ export default function Socials() {
         Trusted by over <span className='text-yellow-400'>200 companies</span>{' '}
         all over the world
       </p> */}
-      <div
-        className='flex flex-row flex-wrap items-center justify-evenly max-w-6xl m-auto'
-        data-aos='zoom-y-out'
-      >
+      <div className='flex flex-row flex-wrap items-center justify-evenly max-w-6xl m-auto'>
         <img className='w-28 m-6' src='/images/logos/acc.png' alt='acc' />
 
         <img className='w-28 m-6' src='/images/logos/godrej.png' alt='godrej' />

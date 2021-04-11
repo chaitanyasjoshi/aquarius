@@ -41,7 +41,7 @@ export default function Product(props) {
   };
 
   return (
-    <div className='mt-10' data-aos='zoom-y-out'>
+    <div className='mt-10'>
       <h3 className='text-3xl lg:text-4xl text-gray-800 text-center font-bold'>
         {props.desc.name}
       </h3>

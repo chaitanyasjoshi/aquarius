@@ -9,7 +9,6 @@ export default function ContactUs({ offices, locations }) {
           <div
             className='col-span-1 shadow-md rounded-lg p-5 h-60 lg:h-72 bg-white flex flex-col justify-between'
             key={i}
-            data-aos='fade-up'
           >
             <div>
               <p className='mb-1 text-lg font-semibold text-gray-800'>
@@ -51,7 +50,6 @@ export default function ContactUs({ offices, locations }) {
           <div
             className='col-span-1 shadow-md rounded-lg p-5 h-48 bg-white flex flex-col justify-between'
             key={i}
-            data-aos='fade-up'
           >
             <div>
               <p className='mb-1 text-lg font-semibold text-gray-800'>

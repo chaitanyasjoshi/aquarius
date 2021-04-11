@@ -19,7 +19,7 @@ export default function News() {
       <main className='flex-grow bg-gray-50'>
         {/*  Page sections */}
         <section className='py-10 lg:py-20 px-3 lg:px-8 max-w-7xl m-auto'>
-          <div className='mt-10' data-aos='zoom-y-out'>
+          <div className='mt-10'>
             <h3 className='text-3xl lg:text-4xl text-gray-800 text-center font-bold'>
               News & Events
             </h3>

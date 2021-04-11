@@ -61,7 +61,7 @@ export default function ContactForm() {
 
       {/* Section content */}
       <div className='relative flex flex-col lg:flex-row max-w-7xl m-auto'>
-        <div className='lg:w-1/2 px-6 sm:px-8 py-24' data-aos='fade-right'>
+        <div className='lg:w-1/2 px-6 sm:px-8 py-24'>
           <h5 className='py-2 text-4xl font-bold text-gray-900'>
             Get in touch
           </h5>
@@ -90,10 +90,7 @@ export default function ContactForm() {
             </Link>
           </p>
         </div>
-        <div
-          className='w-full lg:w-1/2 px-6 sm:px-8 py-24 bg-gray-50'
-          data-aos='fade-left'
-        >
+        <div className='w-full lg:w-1/2 px-6 sm:px-8 py-24 bg-gray-50'>
           <div className='grid grid-cols-2 gap-3'>
             <div className='col-span-2 lg:col-span-1'>
               <Input
