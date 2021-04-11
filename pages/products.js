@@ -1,11 +1,11 @@
-import { server } from '../config/index';
-
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Product from '../components/Product';
 import Meta from '../components/Meta';
 
-export default function Products({ products }) {
+import { products } from '../data/productsData';
+
+export default function Products() {
   return (
     <div className='flex flex-col min-h-screen overflow-hidden font-poppins'>
       <Meta
@@ -30,15 +30,3 @@ export default function Products({ products }) {
     </div>
   );
 }
-
-export const getStaticProps = async () => {
-  const products = await fetch(`${server}/api/products`).then((res) =>
-    res.json()
-  );
-
-  return {
-    props: {
-      products,
-    },
-  };
-};

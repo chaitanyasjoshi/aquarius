@@ -1,5 +1,3 @@
-import { server } from '../config/index';
-
 import Meta from '../components/Meta';
 import Navbar from '../components/Navbar';
 import HeroHome from '../components/HeroHome';
@@ -8,7 +6,9 @@ import FeaturesHome from '../components/FeaturesHome';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 
-export default function Index({ features }) {
+import { features } from '../data/featuresData';
+
+export default function Index() {
   return (
     <div className='flex flex-col min-h-screen overflow-hidden font-poppins'>
       <Meta />
@@ -29,15 +29,3 @@ export default function Index({ features }) {
     </div>
   );
 }
-
-export const getStaticProps = async () => {
-  const features = await fetch(`${server}/api/features`).then((res) =>
-    res.json()
-  );
-
-  return {
-    props: {
-      features,
-    },
-  };
-};

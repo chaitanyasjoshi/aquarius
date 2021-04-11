@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import { server } from '../config/index';
 
 import Input from './Input';
 
@@ -28,6 +27,10 @@ export default function ContactForm() {
       }
     }
     if (isValid) {
+      const server =
+        process.env.NODE_ENV !== 'production'
+          ? 'http://localhost:3000'
+          : process.env.VERCEL_URL;
       let response = await fetch(`${server}/api/contact`, {
         method: 'POST',
         headers: {

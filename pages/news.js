@@ -1,11 +1,11 @@
-import { server } from '../config/index';
-
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Event from '../components/Event';
 import Meta from '../components/Meta';
 
-export default function News({ news }) {
+import { news } from '../data/newsData';
+
+export default function News() {
   return (
     <div className='flex flex-col min-h-screen overflow-hidden font-poppins'>
       <Meta
@@ -37,13 +37,3 @@ export default function News({ news }) {
     </div>
   );
 }
-
-export const getStaticProps = async () => {
-  const news = await fetch(`${server}/api/news`).then((res) => res.json());
-
-  return {
-    props: {
-      news,
-    },
-  };
-};
